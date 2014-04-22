@@ -23,8 +23,8 @@ $(document).ready(function getWingers() {
         var wingerSpeeches = $("#paragraphs");
         var headerTag = "";
         var classicWinger = "";
-        var numberOfSpeeches = "";
-        var speechNumber = "";
+        var numberOfSpeeches = 0;
+        var speechNumber = 0;
         var selectedSpeech = "";
         var speechesToDisplay = "";
 
@@ -42,21 +42,29 @@ $(document).ready(function getWingers() {
             wingersArray[8] = "I love scotch and myself. I tolerate Greendale.";
             wingersArray[9] = "These people are giving out free iPhones!";
 
-            classicWinger = wingersArray[Math.floor((Math.random() * wingersArray.length - 1))];
+            classicWinger = wingersArray[Math.ceil((Math.random() * wingersArray.length - 1))];
 
             $("select option:selected").each(function () {
                 headerTag += "<" + $(this).text() + ">" + classicWinger + "</" + $(this).text() + ">";
             });
+
+			//Validate wingerSpeeches as a number. 
+			function isNumeric(wingerSpeeches){
+		    return !isNaN(wingerSpeeches)
+			}
 
             //User can only get up to 10 paragraphs worth of speeches.
             if (wingerSpeeches.val() > 10) {
                 wingerSpeeches == 10;
             }
 
-            //Round off the number of speeches to nearest integer, then select speeches.
+            //Round off the number of speeches to nearest integer, then select speeches.  Rounds up in case input is between 0 and .5
             if (wingerSpeeches.val() > 0) {
-                numberOfSpeeches = Math.round(wingerSpeeches);
+                numberOfSpeeches = Math.ceil(wingerSpeeches);
             }
+
+
+
             //Select a random speech from the array, then delete it from array.							
             if (numberOfSpeeches != 0) {
                 var speechesArray = new Array();
@@ -72,7 +80,7 @@ $(document).ready(function getWingers() {
                 speechesArray[9] = "I'm sorry, you should take some credit for who I've become...so, let me tell you how I turned out, just so you're crystal clear on your impact.  I'm not well adjusted, and more often than not, I am barely keeping it together.  I'm constantly texting, and there's no one on the other end.  I'm just a grown man who can't even look his own friends in the eye for too long because I'm afraid that they'll see that I am broken, so you get credit for that. ... One time when I was in seventh grade I told everyone at school that I had appendicitis. I wanted someone to worry about me, but when Beth Brennan asked to see the scar, I didn't want to get found out so I took mom's scissors and I made one.   It hurt like Hell. But it was worth it because I got 17 cards and I still keep them in a box underneath my bed 22 years later because it proves that someone at some point cared about me. You wanna see the scar?  So, you get credit for that too.  This is me.";
 
                 for (var i = numberOfSpeeches; i > 0; i--) {
-                    speechNumber = Math.floor((Math.random() * speechesArray.length - 1));
+                    speechNumber = Math.ceil((Math.random() * speechesArray.length - 1));
                     selectedSpeech = speechesArray[speechNumber];
                     //Remove the element from the array to avoid redundancy.
                     speechesArray.remove(speechNumber);
