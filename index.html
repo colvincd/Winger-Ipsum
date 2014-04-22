@@ -7,8 +7,10 @@
 
 <!--<link rel="shortcut icon" href="(Location of 16x16 icon here)" type="image/x-icon" />
 -->
-<link rel="stylesheet" href="css/default-style.css" />
-<script type="text/javascript" src="js/wingerIpsum.js"></script>
+<link rel="stylesheet" type="text/css" href="css/default-style.css" />
+
+
+
 
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -52,7 +54,7 @@ at a Community College</h2>
 <div class="form-row">
 <div class="form-left">Want a Header Tag?</div>
 <div class="form-right"><select id="header-tags" name="header-tags">
-<option selected="">No</option>
+<option value="" selected="No">No</option>
 <option value="h1">h1</option>
 <option value="h2">h2</option>
 <option value="h3">h3</option>
@@ -70,8 +72,8 @@ at a Community College</h2>
 </div>
 
 <div class="form-row">
-<div class="form-left"><input class="button" id="getWingers" value="Generate Text" onclick="getWingers();" type="button"></div>
-<div class="form-right"><input class="button" id="clear" value="Reset" onclick="clearText();" name="Clear" type="reset"></div>
+<div class="form-left"><input class="button" id="generate" value="Generate Text" onclick="getWingers();" name="generate" type="button"></div>
+<div class="form-right"><input class="button" id="clear" value="Reset" onclick="clearText();" name="clear" type="reset"></div>
 </div>
 
 <div id="hiddenUntilGeneration" class="form-row">
@@ -91,11 +93,10 @@ at a Community College</h2>
 
   <!-- end .container --></div>
 <footer></footer>  
-  <!--Still need to Add JavaScript and jQuery Libraraies to make this work. -->
- 
- <script type="text/javascript" src="js/jquery-1.11.0.min.js"</script>
+  <!--Still need to Add JavaScript and jQuery Libaraies to make this work. -->
 
-
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/wingerIpsum.js"></script>
   
 </body>
 </html>

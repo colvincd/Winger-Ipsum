@@ -1,15 +1,19 @@
 // JavaScript Document
 
-
-$(document).ready(function clearText() {
-    $("#clear").click(function () {
+function clearText(){
+$(document).ready(function() {
         $("#hiddenUntilGeneration").hide();
         $("#wingers").val('');
-    }); //Anonymous Function
-}); //End Function
+    }); //End Anonymous Function
+}//End Clear Text Function
 
-$(document).ready(function getWingers() {
-    $("#getWingers").click(function () {
+function getWingers(){
+
+$(document).ready(function() {
+  //  $("#getWingers").click(function () {
+
+
+
 
         //Clear any old text from text box.
         $('#wingers').text('');
@@ -48,10 +52,14 @@ $(document).ready(function getWingers() {
                 headerTag += "<" + $(this).text() + ">" + classicWinger + "</" + $(this).text() + ">";
             });
 
+	alert(wingerSpeeches.val());
+
 			//Validate wingerSpeeches as a number. 
 			function isNumeric(wingerSpeeches){
 		    return !isNaN(wingerSpeeches)
 			}
+			
+				
 
             //User can only get up to 10 paragraphs worth of speeches.
             if (wingerSpeeches.val() > 10) {
@@ -101,4 +109,5 @@ $(document).ready(function getWingers() {
 
 
     });	//End Anonymous function					
-});//End Get Wingers Function
+//});//End Get Wingers Function
+}
