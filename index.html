@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Winger Ipsum</title>
+
+<!--<link rel="shortcut icon" href="(Location of 16x16 icon here)" type="image/x-icon" />
+-->
+<link rel="stylesheet" href="css/default-style.css" />
+<script type="text/javascript" src="js/wingerIpsum.js"></script>
+
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--></head>
+
+<body>
+
+<header>
+<div class="header-container">
+
+<img class="winger-image" src="images/winger.jpg" alt="Jeff Winger">
+
+
+<div class="header-text-container">
+<h1>Winger Ipsum</h1>
+<h2>Placeholder Text said</br>
+at a Community College</h2>
+</div>
+
+
+
+</div> <!--end class header container-->
+</header>
+
+<div class="container">
+
+<div class="inner-container">
+
+<div class="form-row">
+<h3>Get Some Classic Wingers:</h3>
+</div>
+
+<div class="form">
+
+<form name="winger-ipsum"> 
+<div class="form-row">
+<div class="form-left">How Many Paragraphs?</div>
+<div class="form-right"><input id="paragraphs" name="paragraphs" class="textbox" size="2" maxlength="2" value="1" type="text"></div>
+</div>
+
+<div class="form-row">
+<div class="form-left">Want a Header Tag?</div>
+<div class="form-right"><select id="header-tags" name="header-tags">
+<option selected="">No</option>
+<option value="h1">h1</option>
+<option value="h2">h2</option>
+<option value="h3">h3</option>
+<option value="h4">h4</option>
+<option value="h5">h5</option>
+<option value="h6">h6</option>
+</select>
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-left">Include &lt;p&gt; Tags?</div>
+<div class="form-right"><span class="checkbox"></span>
+<input id="paragraph-tags" name="paragraph-tags" type="checkbox" class="styled-checkbox"></div>
+</div>
+
+<div class="form-row">
+<div class="form-left"><input class="button" id="getWingers" value="Generate Text" onclick="getWingers();" type="button"></div>
+<div class="form-right"><input class="button" id="clear" value="Reset" onclick="clearText();" name="Clear" type="reset"></div>
+</div>
+
+<div id="hiddenUntilGeneration" class="form-row">
+<p class="code-notice">Copy the code below and paste as desired.</p>
+<textarea class="textbox" id="wingers" name="wingers"></textarea>
+</div>
+</form>
+
+<!--Text Box for code that generates goes here.-->
+
+</div>
+
+
+</div>   <!--end .inner-container-->
+
+
+
+  <!-- end .container --></div>
+<footer></footer>  
+  <!--Still need to Add JavaScript and jQuery Libraraies to make this work. -->
+ 
+ <script type="text/javascript" src="js/jquery-1.11.0.min.js"</script>
+
+
+  
+</body>
+</html>
