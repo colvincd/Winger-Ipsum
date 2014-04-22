@@ -48,33 +48,44 @@ $(document).ready(function() {
 
             classicWinger = wingersArray[Math.ceil((Math.random() * wingersArray.length - 1))];
 
+
+
             $("select option:selected").each(function () {
                 headerTag += "<" + $(this).text() + ">" + classicWinger + "</" + $(this).text() + ">";
             });
 
-	alert(wingerSpeeches.val());
 
+	/***Need Code to Validate the value in the # of Paragraphs box***/
+/*
 			//Validate wingerSpeeches as a number. 
 			function isNumeric(wingerSpeeches){
 		    return !isNaN(wingerSpeeches)
-			}
+			}*/
 			
-				
-
+			//end the function if value is Not a Number
+/*			if (wingerSpeeches.val() == isNaN) {
+				$('#wingers').text('');
+				$('#wingers').text('Please a number of paragraphs from 1 to 10.');
+				return;
+			}
+*/
             //User can only get up to 10 paragraphs worth of speeches.
-            if (wingerSpeeches.val() > 10) {
+/*            if (wingerSpeeches.val() > 10) {
                 wingerSpeeches == 10;
             }
+
+
 
             //Round off the number of speeches to nearest integer, then select speeches.  Rounds up in case input is between 0 and .5
             if (wingerSpeeches.val() > 0) {
                 numberOfSpeeches = Math.ceil(wingerSpeeches);
             }
-
+*/
 
 
             //Select a random speech from the array, then delete it from array.							
-            if (numberOfSpeeches != 0) {
+	        //User can only get up to 10 paragraphs worth of speeches.
+			if (wingerSpeeches.val() != "") {
                 var speechesArray = new Array();
                 speechesArray[0] = "We're the only species on Earth that observes Shark Week. Sharks don't even observe Shark Week, but we do, for the same reason I can pick up this pencil, tell you its name is Steve, and go like this!  And part of you dies, just a little bit, on the inside. Because people can connect with anything. We can sympathize with a pencil, we can forgive a shark, and we can give Ben Affleck an Academy Award for screenwriting. ...People can find the good in just about anything but themselves. Look at me. It's clear to all of you that I am awesome, but I can never admit that because that would make me an ass. What I can do is see what makes Annie awesome. She's driven. We need driven people or the lights go out and the ice cream melts. And Pierce. We need guys like Pierce. This guy has wisdom to offer. ... We should listen to him sometime. We wouldn't regret it. And Shirley. Shirley has earned our respect. Not as a wife, not as a mother, but as a woman. And don't test her on that, because that thing about the jukebox was way too specific to be improvised. And Troy. Who cares if Troy thinks he's all that? Maybe he is. Do you think astronauts go to the moon because they hate oxygen? No, they're trying to impress their high school's prom king. And Abed. Abed's a shaman. You ask him to pass the salt, he gives you a bowl of soup because you know what? Soup is better. Abed is better. You are all better than you think you are. You are just designed not to believe it when you hear it from yourself. ... I want you to look to the person to your left, sorry, look at the person next to you.  I want you to extend to that person the same compassion that you extend to sharks, pencils and Ben Affleck. I want you to say to that person, 'I forgive you.' ... You've just stopped being a study group, you've become something unstoppable.  I hereby pronounce you a community.";
                 speechesArray[1] = "Gentlemen, I'm sure you suspected that Ms. Perry was pretty odd before the recess, but if you could have heard all the stuff she just told me in the shower you would realize she is all the way out of her damn mind.  She doesn't want to succeed because she doesn't think she can. She goes out of her way to fail. That's crazy!  But, do we really want to make it a crime to be crazy at Greendale?  I mean look at us, I mean, you two are arguing about status at a college that correspondence schools make fun of. Dean, you want so bad for this place to be Ivy League that you are putting us at risk of electrocution!  Because everyone on this campus is nuts. ... If you want to rehabilitate your fellow inmate, you need to sentence her to staying here with us, because if crazy people can't be at Greendale where are we supposed to go?";
@@ -87,16 +98,22 @@ $(document).ready(function() {
                 speechesArray[8] = "The dead can't have business, they can't want or think or do, it's what makes them dead.  It’s the living who choose to be haunted.  Cornelius was barely a dad, now he's nothing, a Pierce keeps staring into that void or he can turn around and say, ‘who gives a crap who my dad was? I'm my own man now I—‘ Wow, pretty slick Britta, using ghosts to trick me into opening up.  Too bad it didn't work.";
                 speechesArray[9] = "I'm sorry, you should take some credit for who I've become...so, let me tell you how I turned out, just so you're crystal clear on your impact.  I'm not well adjusted, and more often than not, I am barely keeping it together.  I'm constantly texting, and there's no one on the other end.  I'm just a grown man who can't even look his own friends in the eye for too long because I'm afraid that they'll see that I am broken, so you get credit for that. ... One time when I was in seventh grade I told everyone at school that I had appendicitis. I wanted someone to worry about me, but when Beth Brennan asked to see the scar, I didn't want to get found out so I took mom's scissors and I made one.   It hurt like Hell. But it was worth it because I got 17 cards and I still keep them in a box underneath my bed 22 years later because it proves that someone at some point cared about me. You wanna see the scar?  So, you get credit for that too.  This is me.";
 
-                for (var i = numberOfSpeeches; i > 0; i--) {
+/*                for (var i = wingerSpeeches; i > 0; i--) {
                     speechNumber = Math.ceil((Math.random() * speechesArray.length - 1));
                     selectedSpeech = speechesArray[speechNumber];
                     //Remove the element from the array to avoid redundancy.
                     speechesArray.remove(speechNumber);
-                }
+                }*/
             }
+			
+			
+			 selectedSpeech = speechesArray[Math.ceil((Math.random() * speechesArray.length - 1))];
+
+	
+			
             //for <p> tags
             if ($("#paragraph-tags").prop("checked")) {
-                speechesToDisplay += "<p>" + selectedSpeech + "<p>";
+                speechesToDisplay += "<p>" + selectedSpeech + "</p>";
             } else {
                 speechesToDisplay += selectedSpeech;
             }
