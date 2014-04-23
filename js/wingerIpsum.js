@@ -8,7 +8,6 @@ $(document).ready(function() {
 }//End Clear Text Function
 
 function getWingers(){
-
 $(document).ready(function() {
         //Clear any old text from text box.
         $('#wingers').text('');
@@ -28,8 +27,6 @@ $(document).ready(function() {
 
         //'if' statement checking for header request. "No" has no value.
         if (wingersHeader != "") {
-
-
             var wingersArray = new Array();
             wingersArray[0] = "To victory, it feels unfamiliar but it tastes like chicken.";
             wingersArray[1] = "I'm a teacher. Wait. That's worse than the truth. I'm a student.";
@@ -42,13 +39,12 @@ $(document).ready(function() {
             wingersArray[8] = "I love scotch and myself. I tolerate Greendale.";
             wingersArray[9] = "These people are giving out free iPhones!";
 
-
             classicWinger = wingersArray[Math.ceil((Math.random() * wingersArray.length - 1))];
 
 
 			headerTag = wingersHeader;
-            headerText += "<" + headerTag + ">" + classicWinger + "</" + headerTag + ">";
-		}
+            headerText += "<" + headerTag + ">" + classicWinger + "</" + headerTag + ">  \n";
+		}//End If Statement for creating headers.
 
             //Select a random speech from the array, then delete it from array.							
 	        //User can only get up to 10 paragraphs worth of speeches.
@@ -66,33 +62,25 @@ $(document).ready(function() {
                 speechesArray[8] = "The dead can't have business, they can't want or think or do, it's what makes them dead.  It’s the living who choose to be haunted.  Cornelius was barely a dad, now he's nothing, a Pierce keeps staring into that void or he can turn around and say, ‘who gives a crap who my dad was? I'm my own man now I—‘ Wow, pretty slick Britta, using ghosts to trick me into opening up.  Too bad it didn't work.";
                 speechesArray[9] = "I'm sorry, you should take some credit for who I've become...so, let me tell you how I turned out, just so you're crystal clear on your impact.  I'm not well adjusted, and more often than not, I am barely keeping it together.  I'm constantly texting, and there's no one on the other end.  I'm just a grown man who can't even look his own friends in the eye for too long because I'm afraid that they'll see that I am broken, so you get credit for that. ... One time when I was in seventh grade I told everyone at school that I had appendicitis. I wanted someone to worry about me, but when Beth Brennan asked to see the scar, I didn't want to get found out so I took mom's scissors and I made one.   It hurt like Hell. But it was worth it because I got 17 cards and I still keep them in a box underneath my bed 22 years later because it proves that someone at some point cared about me. You wanna see the scar?  So, you get credit for that too.  This is me.";
 
-/*                for (var i = wingerSpeeches; i > 0; i--) {
-                    speechNumber = Math.ceil((Math.random() * speechesArray.length - 1));
+                for (var i = wingerSpeeches; i > 0; i--) {
+                    speechNumber = Math.ceil((Math.random() * speechesArray.length-1));
                     selectedSpeech = speechesArray[speechNumber];
-                    //Remove the element from the array to avoid redundancy.
-                    speechesArray.remove(speechNumber);
-                }*/
+					
+					        //for <p> tags
+            				if ($("#paragraph-tags").prop("checked")) {
+				                speechesToDisplay += "<p>" + selectedSpeech + "</p> \n";
+				            } else {
+                				speechesToDisplay += selectedSpeech + "\n";
+            				}
+					
+                    //Remove the element from the array to avoid redundancy.					
+					var speechToRemove = speechesArray[speechNumber];
+                    speechesArray.splice($.inArray(speechToRemove, speechesArray),1);
+				}
+
             }
-			
-			
-			 selectedSpeech = speechesArray[Math.ceil((Math.random() * speechesArray.length - 1))];
-
-	
-			
-            //for <p> tags
-            if ($("#paragraph-tags").prop("checked")) {
-                speechesToDisplay += "<p>" + selectedSpeech + "</p>";
-            } else {
-                speechesToDisplay += selectedSpeech;
-            }
-
-
+			//Send (any) header and paragraphs to text box.
             $("#wingers").text(headerText + speechesToDisplay);
 
-
-      /*  }*/
-
-
     });	//End Anonymous function					
-//});//End Get Wingers Function
-}
+}//End getWingers
