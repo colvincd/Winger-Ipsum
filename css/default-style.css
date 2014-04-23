@@ -44,9 +44,10 @@ nav {
 }
 
 .nav-container {
-    max-width: 600px;
+    max-width: 575px;
     margin: -10px auto 0 auto;
-    font-family: 'Sports', 'Graduate', Helvetica, Arial, sans-serif;
+    font-family: 'Graduate', Helvetica, Arial, sans-serif;
+	font-size: 14px;
 }
 
     .nav-container a:link {
@@ -255,7 +256,6 @@ footer {
 .footer-container {
     max-width: 575px;
     margin: 0 auto 0 auto;
-    
     font-family: 'Sports', 'Graduate', Helvetica, Arial, sans-serif;
 	text-align:center;
 }
