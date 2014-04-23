@@ -10,22 +10,16 @@ $(document).ready(function() {
 function getWingers(){
 
 $(document).ready(function() {
-  //  $("#getWingers").click(function () {
-
-
-
-
         //Clear any old text from text box.
         $('#wingers').text('');
-
         //Show box for code generated.
         $("#hiddenUntilGeneration").show();
 
-
         var wingersTextbox = $("#wingers");
-        var wingersHeader = $("#header-tags");
-        var wingerSpeeches = $("#paragraphs");
+        var wingersHeader = $("#header-tags").val();
+        var wingerSpeeches = $("#paragraphs").val();
         var headerTag = "";
+		var headerText = "";
         var classicWinger = "";
         var numberOfSpeeches = 0;
         var speechNumber = 0;
@@ -33,7 +27,9 @@ $(document).ready(function() {
         var speechesToDisplay = "";
 
         //'if' statement checking for header request. "No" has no value.
-        if (wingersHeader.val() != "") {
+        if (wingersHeader != "") {
+
+
             var wingersArray = new Array();
             wingersArray[0] = "To victory, it feels unfamiliar but it tastes like chicken.";
             wingersArray[1] = "I'm a teacher. Wait. That's worse than the truth. I'm a student.";
@@ -46,46 +42,18 @@ $(document).ready(function() {
             wingersArray[8] = "I love scotch and myself. I tolerate Greendale.";
             wingersArray[9] = "These people are giving out free iPhones!";
 
+
             classicWinger = wingersArray[Math.ceil((Math.random() * wingersArray.length - 1))];
 
 
-
-            $("select option:selected").each(function () {
-                headerTag += "<" + $(this).text() + ">" + classicWinger + "</" + $(this).text() + ">";
-            });
-
-
-	/***Need Code to Validate the value in the # of Paragraphs box***/
-/*
-			//Validate wingerSpeeches as a number. 
-			function isNumeric(wingerSpeeches){
-		    return !isNaN(wingerSpeeches)
-			}*/
-			
-			//end the function if value is Not a Number
-/*			if (wingerSpeeches.val() == isNaN) {
-				$('#wingers').text('');
-				$('#wingers').text('Please a number of paragraphs from 1 to 10.');
-				return;
-			}
-*/
-            //User can only get up to 10 paragraphs worth of speeches.
-/*            if (wingerSpeeches.val() > 10) {
-                wingerSpeeches == 10;
-            }
-
-
-
-            //Round off the number of speeches to nearest integer, then select speeches.  Rounds up in case input is between 0 and .5
-            if (wingerSpeeches.val() > 0) {
-                numberOfSpeeches = Math.ceil(wingerSpeeches);
-            }
-*/
-
+			headerTag = wingersHeader;
+            headerText += "<" + headerTag + ">" + classicWinger + "</" + headerTag + ">";
+		}
 
             //Select a random speech from the array, then delete it from array.							
 	        //User can only get up to 10 paragraphs worth of speeches.
-			if (wingerSpeeches.val() != "") {
+		        if (wingerSpeeches != "") {
+
                 var speechesArray = new Array();
                 speechesArray[0] = "We're the only species on Earth that observes Shark Week. Sharks don't even observe Shark Week, but we do, for the same reason I can pick up this pencil, tell you its name is Steve, and go like this!  And part of you dies, just a little bit, on the inside. Because people can connect with anything. We can sympathize with a pencil, we can forgive a shark, and we can give Ben Affleck an Academy Award for screenwriting. ...People can find the good in just about anything but themselves. Look at me. It's clear to all of you that I am awesome, but I can never admit that because that would make me an ass. What I can do is see what makes Annie awesome. She's driven. We need driven people or the lights go out and the ice cream melts. And Pierce. We need guys like Pierce. This guy has wisdom to offer. ... We should listen to him sometime. We wouldn't regret it. And Shirley. Shirley has earned our respect. Not as a wife, not as a mother, but as a woman. And don't test her on that, because that thing about the jukebox was way too specific to be improvised. And Troy. Who cares if Troy thinks he's all that? Maybe he is. Do you think astronauts go to the moon because they hate oxygen? No, they're trying to impress their high school's prom king. And Abed. Abed's a shaman. You ask him to pass the salt, he gives you a bowl of soup because you know what? Soup is better. Abed is better. You are all better than you think you are. You are just designed not to believe it when you hear it from yourself. ... I want you to look to the person to your left, sorry, look at the person next to you.  I want you to extend to that person the same compassion that you extend to sharks, pencils and Ben Affleck. I want you to say to that person, 'I forgive you.' ... You've just stopped being a study group, you've become something unstoppable.  I hereby pronounce you a community.";
                 speechesArray[1] = "Gentlemen, I'm sure you suspected that Ms. Perry was pretty odd before the recess, but if you could have heard all the stuff she just told me in the shower you would realize she is all the way out of her damn mind.  She doesn't want to succeed because she doesn't think she can. She goes out of her way to fail. That's crazy!  But, do we really want to make it a crime to be crazy at Greendale?  I mean look at us, I mean, you two are arguing about status at a college that correspondence schools make fun of. Dean, you want so bad for this place to be Ivy League that you are putting us at risk of electrocution!  Because everyone on this campus is nuts. ... If you want to rehabilitate your fellow inmate, you need to sentence her to staying here with us, because if crazy people can't be at Greendale where are we supposed to go?";
@@ -119,10 +87,10 @@ $(document).ready(function() {
             }
 
 
-            $("#wingers").text(headerTag + speechesToDisplay);
+            $("#wingers").text(headerText + speechesToDisplay);
 
 
-        }
+      /*  }*/
 
 
     });	//End Anonymous function					
