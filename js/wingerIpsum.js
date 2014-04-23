@@ -94,3 +94,5 @@ function getWingers() {
 
     });	//End Anonymous function					
 }//End getWingers
+
+//Haven't you humilated me enough?  At least I got some actual developers to look at this code.  I didn't take jQuery because no one told me it was being offer spring quarter at my COMMUNITY COLLEGE.

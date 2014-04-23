@@ -1,254 +1,267 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 
-header,nav,article,footer,section,aside,figure,figcaption {display:block;}
-
+header, nav, article, footer, section, aside, figure, figcaption {
+    display: block;
+}
 
 body {
-	margin:0;
-	padding:0;
-	border:0;
-	background: rgba(12,82,124,0.8);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgba(12,82,124,0.8);
 }
 
 @font-face {
-font-family: Community;
-src:url(../fonts/character_collegiate-heavy-outline/collegiateHeavyOutline%20Medium.ttf);
+    font-family: Community;
+    src: url(../fonts/character_collegiate-heavy-outline/collegiateHeavyOutline%20Medium.ttf);
 }
 
 @font-face {
-font-family: Freshman;
-src:url(../fonts/freshman/Freshman.ttf);
+    font-family: Freshman;
+    src: url(../fonts/freshman/Freshman.ttf);
 }
 
 @font-face {
-font-family: Sports;
-src:url(../fonts/bou_college/BouCollege.ttf);
+    font-family: Sports;
+    src: url(../fonts/bou_college/BouCollege.ttf);
 }
+
+@font-face {
+    font-family: Graduate;
+    src: url(../fonts/graduate/Graduate-Regular.ttf);
+}
+
 
 nav {
-position: absolute;
-top:0;
-width: 100%;
-min-width: 990px;
-height: 40px;
-margin:0 auto 0 auto;
-background:#FFFFFF;
-	
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-width: 990px;
+    height: 40px;
+    margin: 0 auto 0 auto;
+    background: #FFFFFF;
 }
 
 .nav-container {
-max-width:575px;
-margin: -10px auto 0 auto;	
-font-family: 'Sports', Helvetica Neue, Helvetica, Arial, sans-serif; 
+    max-width: 600px;
+    margin: -10px auto 0 auto;
+    font-family: 'Sports', 'Graduate', Helvetica, Arial, sans-serif;
 }
 
-.nav-container a:link {
-color: #FFFFFF;
-text-decoration: underline;
-}
+    .nav-container a:link {
+        color: #000000;
+        text-decoration: underline;
+    }
 
-.nav-container a:visited {
-color: #3B7395;
-text-decoration: underline;
-}
+    .nav-container a:visited {
+        color: #3B7395;
+        text-decoration: underline;
+    }
 
 a:hover, a:active, a:focus {
-color: #FDD629;
-text-decoration: none;
+    color: #FDD629;
+    text-decoration: none;
 }
 
-
 .nav-container-left {
-float:left;
-text-align:left;
+    float: left;
+    text-align: left;
 }
 
 .nav-container-right {
-float:right;
-text-align:right;
+    float: right;
+    text-align: right;
 }
 
-
 header {
-width: 100%;
-min-width: 990px;
-height: 175px;
-margin:40px auto 0 auto;
+    width: 100%;
+    min-width: 990px;
+    height: 175px;
+    margin: 40px auto 0 auto;
 }
 
 .header-container {
-max-width:575px;
-margin: 0 auto 0 auto;	
+    max-width: 575px;
+    margin: 0 auto 0 auto;
 }
 
-.header-text-container{
-	float:left;
+.header-text-container {
+    float: left;
 }
 
 .header-container h1 {
-margin: 25px 0 0 0;
-font-family: 'Community', Helvetica Neue, Helvetica, Arial, sans-serif; 
-font-size:56px;
-font-weight:normal;	
-color:#FDD629;
+    margin: 25px 0 0 0;
+    font-family: 'Community', 'Graduate', Helvetica, Arial, sans-serif;
+    font-size: 56px;
+    font-weight: normal;
+    color: #FDD629;
 }
 
 .header-container h2 {
-margin: 30px 0 0 10px;
-font-family: 'Freshman', Helvetica Neue, Helvetica, Arial, sans-serif; 
-font-size:24px;
-font-weight:normal;	
-color:#FDD629;
+    margin: 30px 0 0 10px;
+    font-family: 'Freshman', 'Graduate', Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    color: #FDD629;
 }
-
-
 
 .winger-image {
-float:right;
-margin: 10px 0 10px 0;
-height: 175px;
-width: 175px;
+    float: right;
+    margin: 10px 0 10px 0;
+    height: 175px;
+    width: 175px;
 }
-	
+
 .container {
-width: 100%;
-min-height:485px;
-min-width: 990px;
-margin: 20px auto 0 auto;
-font-family: 'Freshman', Helvetica Neue, Helvetica, Arial, sans-serif; 
-font-weight:normal;
-background:#FFFFFF;
+    width: 100%;
+    min-height: 485px;
+    min-width: 990px;
+    margin: 20px auto 0 auto;
+    font-family: 'Freshman', 'Graduate', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    background: #FFFFFF;
 }
 
 .inner-container {
-max-width:575px;
-margin: 0 auto 0 auto;	
-padding: 10px 0 0 0;
+    max-width: 575px;
+    margin: 0 auto 0 auto;
+    padding: 10px 0 0 0;
 }
 
 .form {
-max-width:400px;
+    max-width: 400px;
 }
 
 .form-row {
-clear: both;
-margin: 0 auto 20px auto;
+    clear: both;
+    margin: 0 auto 20px auto;
 }
 
-.form-row h3 {
-margin: 0;
-font-size:32px;
-font-weight:normal;	
-color: rgba(12,82,124,0.8);
-}
+    .form-row h3 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: normal;
+        color: rgba(12,82,124,0.8);
+    }
 
-.form-row p {
-margin: 0;
-font-family: 'Sports', Helvetica Neue, Helvetica, Arial, sans-serif; 
-font-weight:normal;	
-}
+    .form-row p {
+        margin: 0;
+        font-family: 'Sports', 'Graduate', Helvetica, Arial, sans-serif;
+        font-weight: normal;
+    }
 
 .form-left {
-margin: 5px 0 5px 0;
-float: left;
-font-size:24px;
-font-weight:normal;	
-color:#000000;
+    margin: 5px 0 5px 0;
+    float: left;
+    font-size: 24px;
+    font-weight: normal;
+    color: #000000;
 }
 
 .form-right {
-margin: 5px 0 5px 0;
-float: right;
-font-size:24px;
-font-weight:normal;	
-color:#000000;
+    margin: 5px 0 5px 0;
+    float: right;
+    font-size: 24px;
+    font-weight: normal;
+    color: #000000;
 }
 
 #paragraphs {
-	 margin:0px;
-	 padding:3px;
-	 border: 2px solid #3B7395;
-	 background: #FFFFFF;
-	 text-align:right;
+    margin: 0px;
+    padding: 3px;
+    border: 2px solid #3B7395;
+    background: #FFFFFF;
+    text-align: right;
 }
 
 #header-tags {
-	margin:0px;
-	padding:2px;
-	border: 2px solid #3B7395;
-	background: #FFFFFF;
+    margin: 0px;
+    padding: 2px;
+    border: 2px solid #3B7395;
+    background: #FFFFFF;
 }
 
 /*CSS For Custom Checkboxes*/
-
 .styled-checkbox {
-	-webkit-appearance: none;
-	background-color: #FFFFFF;
-	border: 2px solid #3B7395;
-	margin: 3px 0 0 0;
-	padding:9px;
-	display:inline-block;
-	position: relative;
+    -webkit-appearance: none;
+    background-color: #FFFFFF;
+    border: 2px solid #3B7395;
+    margin: 3px 0 0 0;
+    padding: 9px;
+    display: inline-block;
+    position: relative;
 }
 
-.styled-checkbox:checked {
-	background-color: #3B7395;
-	border: 2px solid #3B7395;
-	color: #FDD629;
-}
+    .styled-checkbox:checked {
+        background-color: #3B7395;
+        border: 2px solid #3B7395;
+        color: #FDD629;
+    }
 
-.styled-checkbox:checked:after {
-	content: '\2714';
-	font-size: 14px;
-	position: absolute;
-	top: 0px;
-	left: 3px;
-	color: #FDD629;
-}
+        .styled-checkbox:checked:after {
+            content: '\2714';
+            font-size: 14px;
+            position: absolute;
+            top: 0px;
+            left: 3px;
+            color: #FDD629;
+        }
 
-/*CSS for Form Buttona*/
+/*CSS for Form Buttons*/
 .button {
-	font-family: 'Freshman', Helvetica Neue, Helvetica, Arial, sans-serif;
-	font-size:18px;
-	font-weight:normal;	
-	padding:2px;
-	border: 2px solid #FDD629;
-	vertical-align:middle;
-	color:#FDD629;
-	background: #3B7395;
-
+    font-family: 'Freshman', 'Graduate', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 2px;
+    border: 2px solid #FDD629;
+    vertical-align: middle;
+    color: #FDD629;
+    background: #3B7395;
 }
 
-.button:focus {outline:0;}
-.button:hover {background: #FDD629; color:#3B7395; border: 2px solid #3B7395;outline:0;}
-.button:focus {outline:0;}
+    .button:focus {
+        outline: 0;
+    }
 
+    .button:hover {
+        background: #FDD629;
+        color: #3B7395;
+        border: 2px solid #3B7395;
+        outline: 0;
+    }
 
+    .button:focus {
+        outline: 0;
+    }
+
+/*CSS for Hidden Content*/
 #hiddenUntilGeneration {
-display:none;
+    display: none;
 }
 
 #wingers {
-	border: 5px solid #3B7395;
-	height:150px;
-	width:575px;
-	}
-	
-footer {
-	width:100%;
-	height:40px;
-	margin: 0 auto 0 auto;
-	}
-	
-.footer-container{
-		max-width:575px;
-		margin: 0 auto 0 auto;
-		padding: 10px 0 0 0;	
-		font-family: 'Sports', Helvetica Neue, Helvetica, Arial, sans-serif; 
-}
-	
-.footer-container h6 {
-font-weight:normal;	
+    border: 5px solid #3B7395;
+    height: 150px;
+    width: 575px;
 }
 
+footer {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto 0 auto;
+}
+
+.footer-container {
+    max-width: 575px;
+    margin: 0 auto 0 auto;
+    
+    font-family: 'Sports', 'Graduate', Helvetica, Arial, sans-serif;
+	text-align:center;
+}
+
+    .footer-container h6 {
+        font-weight: normal;
+    }
+
+/*<Sorry if my CSS is crude, they didn't cover it at my COMMUNITY COLLEGE. */
