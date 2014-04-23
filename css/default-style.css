@@ -244,27 +244,14 @@ footer {
 	}
 	
 .footer-container{
-max-width:575px;
-margin: 0 auto 0 auto;	
-font-family: 'Sports', Helvetica Neue, Helvetica, Arial, sans-serif; 
+/*		position: absolute;*/
+		width:100%;
+		margin: 0 auto 0 auto;	
+		font-family: 'Sports', Helvetica Neue, Helvetica, Arial, sans-serif; 
 }
 	
-.footer-container-left {
-float:left;
-text-align:left;
-}
-
-.footer-container-right {
-float:right;
-text-align:right;
-}
-
 .footer-container h6 {
 margin: 0 0 10px 0;
 font-weight:normal;	
 }
 
-.footer-container h4 {
-margin: 0 0 10px 0;
-font-weight:normal;	
-}
