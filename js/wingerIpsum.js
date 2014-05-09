@@ -6,7 +6,7 @@ JavaScript File for generating placeholder code at WingerIpsum.com
 By Casey Colvin
 4/22/14
 All String Quotes © 2009-2014 Sony Pictures Television Inc Universal Media Studios
-Community Airs Thursdays 8/7c on NBC
+
 #sixseasonsandamovie
 */
 
