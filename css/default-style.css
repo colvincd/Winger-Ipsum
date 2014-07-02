@@ -38,7 +38,7 @@ nav {
     top: 0;
     width: 100%;
     min-width: 990px;
-    height: 40px;
+    height: 50px;
     margin: 0 auto 0 auto;
     background: #FFFFFF;
 }
@@ -79,7 +79,7 @@ header {
     width: 100%;
     min-width: 990px;
     height: 175px;
-    margin: 40px auto 0 auto;
+    margin: 50px auto 0 auto;
 }
 
 .header-container {
@@ -262,6 +262,16 @@ footer {
 
     .footer-container h6 {
         font-weight: normal;
+    }
+	
+	    .footer-container a:link {
+        color: #000000;
+        text-decoration: underline;
+    }
+
+    	.footer-container a:visited {
+        color: #3B7395;
+        text-decoration: underline;
     }
 
 /*<Sorry if my CSS is crude, they didn't cover it at my COMMUNITY COLLEGE. */
