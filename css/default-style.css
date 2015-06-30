@@ -47,7 +47,7 @@ nav {
     max-width: 575px;
     margin: -10px auto 0 auto;
     font-family: 'Graduate', Helvetica, Arial, sans-serif;
-	font-size: 14px;
+    font-size: 14px;
 }
 
     .nav-container a:link {
@@ -110,7 +110,7 @@ header {
 .winger-image {
     float: right;
     margin: 10px 0 10px 0;
-   /* height: 175px;
+    /* height: 175px;
     width: 175px; */
 }
 
@@ -257,21 +257,19 @@ footer {
     max-width: 575px;
     margin: 0 auto 0 auto;
     font-family: 'Sports', 'Graduate', Helvetica, Arial, sans-serif;
-	text-align:center;
+    text-align: center;
 }
 
     .footer-container h6 {
         font-weight: normal;
     }
-	
-	    .footer-container a:link {
+
+    .footer-container a:link {
         color: #000000;
         text-decoration: underline;
     }
 
-    	.footer-container a:visited {
+    .footer-container a:visited {
         color: #3B7395;
         text-decoration: underline;
     }
-
-/*<Sorry if my CSS is crude, they didn't cover it at my COMMUNITY COLLEGE. */
